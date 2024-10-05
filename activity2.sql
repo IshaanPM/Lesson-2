@@ -1,0 +1,31 @@
+CREATE TABLE STUDENT (
+    ID INT PRIMARY KEY,
+    NAME VARCHAR(50),
+    AGE INT,
+    ADDRESS VARCHAR(100)
+);
+
+INSERT INTO STUDENT (ID, NAME, AGE, ADDRESS)
+VALUES
+(1, 'Ram', 18, 'Delhi'),
+(2, 'Sujit', 20, 'Mumbai'),
+(3, 'Ramesh', 18, 'Delhi'),
+(4, 'John', 20, 'Kolkata'),
+(5, 'Anil', 19, 'Bangalore');
+
+SELECT * FROM STUDENT 
+WHERE AGE = 18 AND ADDRESS = 'Delhi';
+
+SELECT * FROM STUDENT 
+WHERE NAME = 'Ram' AND AGE = 18;
+
+SELECT * FROM STUDENT 
+WHERE NAME = 'Ram' OR NAME = 'Sujit';
+
+SELECT * FROM STUDENT 
+WHERE NAME = 'Ram' OR AGE = 20;
+
+SELECT * FROM STUDENT 
+WHERE AGE = 18 AND (NAME = 'Ram' OR NAME = 'Ramesh');
+
+SELECT MIN(AGE) FROM STUDENT;
